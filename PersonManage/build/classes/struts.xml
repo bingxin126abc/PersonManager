@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="personManage" namespace="/" extends="struts-default">
+		 <action name="login" class="com.java1234.action.UserAction">
+            <result name="error" >/index.jsp</result>
+            <result name="success" type="redirect" >/main.jsp</result>
+        </action>
+        <action name="loginout" class="com.java1234.action.UserLogoutAction">
+            <result name="success">/index.jsp</result>
+        </action>
+        <action name="department" class="com.java1234.action.DepartmentAction">
+        </action>
+        <action name="employee" class="com.java1234.action.EmployeeAction">
+        </action>
+         <action name="changePwd" class="com.java1234.action.ChangePwdAction">
+        </action>     
+	</package>     
+</struts>
